@@ -1,0 +1,11 @@
+palabra = input("Ingrese una palabra: ")
+def palíndromo(palabra):
+    palabra = palabra.lower()
+    invertida = ""
+    for letra in palabra:
+        invertida = letra + invertida
+    return invertida == palabra
+if palíndromo(palabra):
+    print("La palabra es un palíndromo")
+else:
+    print("La palabra no es un palíndromo")
