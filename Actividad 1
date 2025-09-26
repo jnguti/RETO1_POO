@@ -1,0 +1,27 @@
+n1 = float(input("Ingrese un número: "))
+n2 = float(input("Ingrese otro número: "))
+suma = n1 + n2
+resta = n1 - n2
+multiplicación = n1 * n2
+división = n1 / n2
+potencia = n1 ** n2
+radicación = n1 ** (1/n2)
+operación = input("Ingrese la operación (+, -, *, /, **, √): ")
+if operación == "+":
+    print("La suma es:", suma)
+elif operación == "-":
+    print("La resta es:", resta)
+elif operación == "*":
+    print("La multiplicación es:", multiplicación)
+elif operación == "/":
+    print("La división es:", división)
+    if n2 == 0:
+        print("Error: División por cero")
+elif operación == "**":
+    print("La potencia es:", potencia)
+elif operación == "√":
+    print("La radicación es:", radicación)
+    if n2 <= 0:
+        print("Error: Radicación por cero o negativa")
+else:
+    print("Operación no válida")
