@@ -1,0 +1,13 @@
+def mismos_caracteres(lista):
+    resultado = []
+    for i in range(len(lista)):
+        for j in range(i + 1, len(lista)):
+            if sorted(lista[i]) == sorted(lista[j]):
+                if lista[i] not in resultado:
+                    resultado.append(lista[i])
+                if lista[j] not in resultado:
+                    resultado.append(lista[j])
+    return resultado
+
+lista = input("Ingrese las palabras separadas por comas: ")
+print("Palabras con los mismos caracteres:", mismos_caracteres([x.strip() for x in lista.split(',')]))
