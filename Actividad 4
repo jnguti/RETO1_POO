@@ -1,0 +1,6 @@
+def mayor_suma_consecutivos(lista):
+    if len(lista) < 2:
+        return None
+    return max(lista[i] + lista[i+1] for i in range(len(lista) - 1))
+lista = input("Ingrese los números separados por comas: ")
+print("La mayor suma de números consecutivos es:", mayor_suma_consecutivos([int(x) for x in lista.split(',')]))
